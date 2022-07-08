@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "html-validate.vscode-html-validate",
+    "ritwickdey.liveserver",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint"
+  ]
+}
