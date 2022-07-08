@@ -2,14 +2,6 @@
 
 Includes a base HTML template and the setup to watch and compile Sass files.
 
-This starter code uses Eleventy to build websites with:
-
-1. Sass compiler
-1. Post CSS
-1. Autoprefixer
-1. CSS Nano
-1. Browsersync
-
 
 ## Development Scripts
 

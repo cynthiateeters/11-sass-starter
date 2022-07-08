@@ -10,12 +10,19 @@
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "build": "npm-run-all build:sass build:eleventy",
+    "stylelint": "npx stylelint '**/*.scss'",
+    "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss' --custom-syntax postcss-scss",
+    "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss' --custom-syntax postcss-scss"
   },
   "keywords": [],
   "author": "Cynthia Teeters",
   "license": "MIT",
-  "dependencies": {
+  "browserslist": [
+    "> 0.5%",
+    "not IE 11"
+  ],
+  "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
@@ -23,10 +30,13 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.14",
     "postcss-cli": "^10.0.0",
-    "sass": "^1.53.0"
-  },
-  "browserslist": [
-    "> 0.5%",
-    "not IE 11"
-  ]
+    "postcss-preset-env": "^7.7.2",
+    "postcss-scss": "^4.0.4",
+    "sass": "^1.53.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
+  }
 }
